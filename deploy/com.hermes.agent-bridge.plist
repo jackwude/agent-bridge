@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hermes.agent-bridge</string>
+    <key>ProgramArguments</key>
+    <array>
+        <!-- 按实际 homebrew/node 路径修改 -->
+        <string>/opt/homebrew/bin/node</string>
+        <string>/Users/YOUR_USER/.hermes/extensions/agent-bridge/server/index.js</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Users/YOUR_USER/.hermes/extensions/agent-bridge/server</string>
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USER/.hermes/logs/agent-bridge.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USER/.hermes/logs/agent-bridge.log</string>
+    <!-- 看门狗可选调参（按需取消注释）：
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>WD_THRESHOLD</key>
+        <string>3</string>
+        <key>WD_WAIT_MS</key>
+        <string>15000</string>
+        <key>WD_FEISHU_CHAT_ID</key>
+        <string>oc_your_chat_id</string>
+    </dict>
+    -->
+</dict>
+</plist>

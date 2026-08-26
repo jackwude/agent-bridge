@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Agent Bridge",
+  "version": "1.0.0",
+  "description": "让 OpenClaw 通过 HTTP 控制浏览器，无需调试端口",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs",
+    "alarms",
+    "cookies"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

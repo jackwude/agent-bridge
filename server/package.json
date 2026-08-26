@@ -1,0 +1,12 @@
+{
+  "name": "agent-bridge-server",
+  "version": "1.0.0",
+  "description": "Agent Bridge - Local HTTP to WebSocket bridge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}
